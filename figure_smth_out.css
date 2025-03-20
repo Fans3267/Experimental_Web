@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 主容器 */
+.container {
+    position: fixed;
+    width: 50%;  /* 這裡可自由調整大小 */
+    height: 20%;
+    text-align: center;
+    top: 2%;
+    left: 25%;
+}
+
+/* 兩個中空正方形的通用樣式 */
+.hollow-square {
+    position: absolute;
+    width: 98%;
+    height: 90%;
+    border: 3px solid black; /* 只顯示邊框 */
+}
+
+/* 左上角的正方形 */
+.top-left {
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+/* 右下角的正方形 */
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    background-color: white;
+}
+
+#pic{
+    position: relative;
+    width: 96%;
+    height: 94%;
+    top: 3%;
+    left: 2%;
+}
