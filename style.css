@@ -21,33 +21,45 @@ body {
 }
 
 #midbox {
-  max-width: 50%;
-  height: 100vh;
+  width: 60%;
+  height: 100%;
   margin: auto;
   padding: 5%;
-  background-color: rgb(255, 209, 250);
+  background-color: rgba(255, 209, 250,0);
 }
 
 #content {
   text-align: left;
 }
 
-#toplinks {
-  width: 40%;
-  position: fixed;
-  left: 30%;
-  top: 10%;
-  transform: translateY(-50%);
-  display: absolute;
-}
+
 
 #nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 10%;
+  background-image: url(image/topbg.jpg);
+  background-size: cover;
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
-  padding: 20px;
+  justify-content: space-evenly; /* 平均分配 */
+  align-items: center; /* 垂直置中 */
+  padding: 10px 0;
+  border: 3px solid black;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.links{
+  flex: 1; /* 平分寬度 */
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 10px;    
+  cursor: pointer;
 }
 
 .icon {
@@ -100,25 +112,27 @@ a:active {
 }
 
 .left, .right {
-    width: 30%;
-    height: 90%;
+    width: 20%;
+    height: 70%;
     position: relative;
     background-size: cover;
     background-position: center;
-    margin: 20px;
+    margin: 3%;
 }
 
 .left {
     background-image: url('image/time_to_night_sky.png'); /*左*/
+    align-items: left;
    
 }
 
 .right {
     background-image: url('image/time_to_night_sky.png'); /*右*/
+    align-items: right;
 }
 
 .overlay {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -133,3 +147,4 @@ a:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: justify;
 }
+
